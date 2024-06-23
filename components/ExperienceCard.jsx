@@ -7,6 +7,7 @@ import {
 	CardSubtitle,
 	CardText,
 	Col,
+	Button,
 } from "reactstrap";
 
 import { Fade } from "react-reveal";
@@ -21,7 +22,7 @@ const ExperienceCard = ({ data }) => {
 				>
 					<CardBody className="">
 						<img
-							src={data.companylogo}
+							src={data.applogo}
 							style={{
 								objectFit: "cover",
 								left: 0,
@@ -29,19 +30,21 @@ const ExperienceCard = ({ data }) => {
 								top: "7rem",
 								marginLeft: "auto",
 								marginRight: "auto",
-								width: "8rem",
-								height: "8rem",
-								borderRadius: "50%",
+								padding: "10px",
+								// paddingRight: "10px",
+								width: "auto",
+								height: "4rem",
+								// borderRadius: "95%",
 							}}
 							className="shadow mb-3"
-							alt={data.companylogo}
+							alt={data.applogo}
 						/>
 						<CardTitle tag="h4" className="mb-2">
-							{data.company}
+							{data.app}
 						</CardTitle>
-						<CardSubtitle tag="h5" className="mb-2">
+						{/* <CardSubtitle tag="h5" className="mb-2">
 							{data.role}
-						</CardSubtitle>
+						</CardSubtitle> */}
 						<CardSubtitle>{data.date}</CardSubtitle>
 						<CardText
 							tag="div"
@@ -55,6 +58,7 @@ const ExperienceCard = ({ data }) => {
 									  })
 									: null}
 							</ul>
+						<Button color="info" onClick={() => window.open(data.link)}>Product</Button>
 						</CardText>
 					</CardBody>
 				</Card>

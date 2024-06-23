@@ -18112,7 +18112,7 @@ textarea[resize="horizontal"] {
 }
 .progress-percentage span {
 	display: inline-block;
-	color: #8898aa;
+	/* color: #8898aa; */
 	font-size: 0.875rem;
 	font-weight: 600;
 }
